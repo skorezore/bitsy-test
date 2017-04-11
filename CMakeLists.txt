@@ -7,7 +7,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     set(CMAKE_CXX_FLAGS "-std=c++1z -Wall -Wextra -pedantic -static")
 endif()
 
-file(GLOB_RECURSE bitsy-test_source ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/include/bitsy-test/*.hpp)
+file(GLOB_RECURSE bitsy-test_source ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 add_executable(bitsy-test ${bitsy-test_source})
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/deps/bitsy)
